@@ -1,0 +1,260 @@
+Windows CMD Commands
+
+========================
+
+cls - clear screen
+md or mkdir - make directory
+cd \ - change dir
+dir - list all files and folders in dir
+
+dir /w \ - shows less details in wide list format
+
+ABSOLUTE: "C:\teststudent"
+relative: ".\backup"
+
+Use `Tab` to complete directory names.
+
+"." - current dir
+".." - parent of current dir
+
+dir P* - to show all that starts with capital P
+ALSO
+dir P??????? - finds exact amt in string
+
+=========================
+
+Getting help
+
+help | more
+"help md" to help on the `md` command
+OR
+md /?  dir /?
+
+========================
+
+Internal and External Commands
+
+- Internal is built into sheel itself "cmd.exe"
+- External have own exec files
+
+*Ext commands usually in "C:\WINDOWS\system32"
+
+Qn: Are commands like cd md cls internal or external?
+Ans: They are internal commands built into the shell or "cmd.exe"
+
+=========================
+
+Command history
+
+- Commands are not case sensitive
+- Commands exec are saved in history buffer
+- `F7` for popup window on history
+- `F8` search for matching command
+- `F9` Run command number
+
+=========================
+
+Displaying messages
+
+`echo` is used
+
+examples:
+echo hello
+echo hello > hello.txt
+`type hello.txt` to display content of the .txt file
+
+echo off - turns off display
+echo on - to turn on
+
+==========================
+
+Copying files and dirs
+
+copy hello.txt hello.bak
+
+`fc hello.txt hello.bak` to file compare their content
+
+==========================
+
+Wildcards in filenames
+
+* - matches any seq of characters
+? - matches any single char
+
+`copy *.bak backup` to copy all files that ends with .bak to the backup sub-dir
+
+===========================
+
+Renaming files and dir
+
+Renaming all .bak files to .old
+ren backup\*.bak *.old
+
+Example case use:
+
+mkdir tmp
+ren tmp temp
+dir *.
+
+===========================
+
+Moving files and dir
+
+=Move .old files to temp sub-dir
+move backup\*.old temp
+
+=Run to move temp to backup sub-dir
+move temp backup
+
+==========================
+
+Removing files
+
+Example scenario
+cd backup/temp
+dir .
+del hello.old
+del *.*
+cd ..\..
+
+Removing dirs
+
+Example use case
+`rd` is for dir, `del` for files
+
+**Dir can only be removed if empty
+
+Here’s the summary in plain text:
+
+Input, Output, and Error Redirection:
+- Standard input (stdin): Input from keyboard.
+- Standard output (stdout): Output to console.
+- Standard error (stderr): Error messages to console.
+- Redirection: Changing where input/output goes.
+
+Commands and Examples:
+- Pipe output to another command:  
+  dir | more  
+  (Send dir output to more command)
+
+- Take input from a file:  
+  sort < data.txt  
+  (Sort data from data.txt)
+
+- Send output to a file:  
+  echo hello > hello.txt  
+  (Write "hello" to hello.txt)
+
+- Append output to a file:  
+  echo world >> hello.txt  
+  (Add "world" to hello.txt)
+
+- Input from a file and output to another file:  
+  sort < data.txt > sorted.txt  
+  (Sort data.txt and save it to sorted.txt)
+
+- Send error output to a file:  
+  sort no_such_file 2> error.txt  
+  (Save error messages to error.txt)
+
+Qn: File size of data.txt? How to account for the size of file?
+Ans: 16 bytes. Includes 10 bytes of data and CRLFs
+(carraige returns and line feeds characters)
+
+- **Carriage return (CR)** `\r`: Moves the cursor to the start of the line.
+- **Line feed (LF)** `\n`: Moves the cursor to the next line.
+
+Windows uses both (`\r\n`), while Unix/Linux/Mac use just `\n` for new lines.
+
+===================================
+
+Redirecting errors
+
+"type data.txt 1>data.bak 2> error.txt"
+WHAT is 1 and 2?
+"1>" redirects to the standard output. "2>" redirects to standard error
+
+===================================
+
+Redirecting to devices
+
+redr not limited to files, devs also
+
+Devices and Examples
+LPTn (Output): Parallel printer (e.g., LPT1, LPT2).  
+  Example: Sends output to a printer.
+  
+PRN (Output): Serial printer.  
+  Example: Sends output to a printer.
+  
+CON (Input/Output): Keyboard (input) and console (output).  
+  Example:  
+  `copy CON new_filename.txt` (Copy from keyboard to file)  
+  `dir > CON` (Send output to console)
+
+NUL (Input/Output): Null device, used to discard unwanted output.  
+  Example:  
+  `dir > NUL` (Suppress output)
+
+Qn: Which device CON refers to in the "copy CON new_filename.txt" command?
+Ans: The CON refers to the standard input. It will copy the input from the keyboard to a file.
+
+============================
+
+Using multiple commands
+
+abc1 & abc2 - run commands in seq - dir /o/b & echo end of file list
+
+abc1 && abc2 - if 1 good, then 2 will exec - cd testfolder && nano module1.txt
+
+abc1 || abc 2 - if 1 bad then run 2 - type no_file || echo file not found
+
+() - group multiple commands - (hostname & echo running on & ver)
+
+; or , - seperate command parameters - dir;*.txt or dir,*.txt
+
+
+==========================
+
+Grouping commands
+
+Eg
+(hostname & echo is running on & ver)
+
+==========================
+
+echo command
+
+Special characters include the following:
+< > ( ) & | ^
+The caret (^) is used as the escape character.
+
+==========================
+
+sort command
+
+sort command: sort [options] [file]
+Sorts lines in a file or from input.
+Example:
+sort data.txt
+sort < data.txt > sorted.txt
+
+Options:
+/r reverses the sort order
+/+n starts sorting at column n
+
+==========================
+
+find command
+
+find command: find [options] "text" [file]
+Searches for specific text in a file or input.
+Example:
+find "hello" file.txt
+
+Options:
+/i ignores case
+/v displays lines that do not contain the text
+/n displays line numbers with matching lines
+
+===========================
