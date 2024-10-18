@@ -1,0 +1,42 @@
+chapter 2 operating sys org
+
+objs
+- list + describe common services by os
+- describe functions of os
+- understand os requirements
+- describe basic os organization
+- explain general implementation issues and mechanisms
+- understand modern os architecture
+
+os services
+- os provides env for running programs
+- diff os are organised along different lines
+- meaning specific services may differ but common classes exist
+- for convenience for user or effiecient operations of the sys
+
+examples of services
+
+===convenience to user
+UI
+- command line interface, gui
+
+prog execution
+- losd, run, terminate programs
+
+input output operations
+- file, cd/dvd/ display devices, smart_cards
+
+file-sys manipulation
+- CRUD files and directories
+- privilege management
+
+error detection
+- detect and able to take proper action
+
+===efficient operation
+resource allocation
+- to be allocated among multiple users fairly
+- different algos for different resources
+
+accounting
+- keep track
