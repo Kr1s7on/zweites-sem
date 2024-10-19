@@ -1,0 +1,17 @@
+Part 1
+- The protocol used and its version
+- 200 OK is a success message
+
+Part 2
+- It tells the recipient what kind of data is sent by the server or the client and how to interpret it
+- It specifies the type of server
+- It is the number that indicates the size of the data in the body of the request or response in bytes.
+- The browser needs it to indicate the type of media or representation of the response body.
+- The Server header helps specify the server used and helps narrow down potential exploits or known vulnerabilities that could be used for that server
+
+Bonus
+- 200 OK, when everything is good
+- 404 Not found, server cant find the resource
+- 500 Internal Server Error, server has encountered a situation it does not know how to handle.
+- 301 Moved Permanently, requested resource has been changed permanently
+- 403 Forbidden, client does not have access rights to the content
