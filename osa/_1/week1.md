@@ -1,4 +1,4 @@
-# Windows CMD Commands
+# Week 1 Windows CMD Commands
 
 ## Basic Commands
 

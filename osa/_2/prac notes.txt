@@ -1,0 +1,11 @@
+prac 3 - doing security configs part 1
+
+1. remove admin autologon
+- regedit
+- its a db that stores hw_sw_preferences settings + options of the pc
+- changing registry files can cause big issues ofc
+- AutoAdminLogon: disable 0, enable 1
+
+2. enabling autolog for student user
+- same steps in 1.
+- 
