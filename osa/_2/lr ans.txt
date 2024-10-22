@@ -1,0 +1,28 @@
+Lecture Review 1
+Intro to OS
+
+1. From the user's point of view, the OS provides an env to run programs, and makes the computer easy to use and ensure effiecient operation.
+    
+    Given: OS allows user to interact with the computer such as browsing the internet, playing games, etc.
+
+2. OS, Libraries, CLI, Compiler, Loader
+
+
+3. No, because we need the OS to interact with the hardware.
+
+4. Below
+    a. Space-multiplex
+    b. Time-multiplex
+    c. both Space-multiplex and Time-multiplex
+    d. Space-multiplex
+    e. Time-multiplex
+    f. Time-multiplex
+
+5. Factors to be considered:
+    • Amount of primary memory available (as a program and its data must first be loaded into primary memory before execution by CPU)
+    • Speed of the processor (faster CPU can satisfy more processes per unit time)
+    • Availability of other resources shared by the programs (e.g. printer, harddisk space, etc.)
+
+6. Batch processing is the preferred strategy
+    • for executing a collection of programs in cases where humans do not interact with the program when it executes; and
+    • where it is important to maximize resource utilization. E.g. Telcos Billing System, Banks Cheque Clearing System
