@@ -61,7 +61,7 @@
     from employees where department_id = 80;
 
 
---  Q3: Divide each employee’s salary by 3. Display only those employees’ last names and salaries who
+--  Q3: Divide each employee's salary by 3. Display only those employees' last names and salaries who
 -- earn a salary that is a multiple of 3.
     select last_name, salary from employees where mod(salary, 3) = 0;
 
@@ -73,19 +73,19 @@
 
 
 -- Q1: For DJs on Demand, display the number of months between the event_date of the Vigil 
--- wedding and today’s date. Round to the nearest month
+-- wedding and today's date. Round to the nearest month
 
     --  This is the query to get the event_date of the Vigil wedding
     select round(months_between(sysdate, event_date)) from d_events where ID = 105;
 
-    -- This is the query to get the number of months between the event_date of the Vigil wedding and today’s date. Round to the nearest month
+    -- This is the query to get the number of months between the event_date of the Vigil wedding and today's date. Round to the nearest month
     select round(months_between(event_date, sysdate)) from d_events where ID = 105;
 
-    -- This is the query to get the number of months between the event_date of the Vigil wedding and today’s date. Round to the nearest month
+    -- This is the query to get the number of months between the event_date of the Vigil wedding and today's date. Round to the nearest month
     select round((sysdate-event_date) / 365.25 * 12) from d_events where ID = 105;
 
 
--- Q2: Display the number of years between the Global Fast Foods employee Bob Miller’s birthday 
+-- Q2: Display the number of years between the Global Fast Foods employee Bob Miller's birthday 
 -- and today. Round to the nearest year
     select round((sysdate-birthdate)/365.25) from f_staffs where id = 9;
 
@@ -103,7 +103,7 @@
 -- ======================================================================================
 
 
---  5-1: Conversion Functions Practice Activities
+--  5.1: Conversion Functions Practice Activities
 
 
 -- Q1: List the last names and birthdays of Global Fast Food Employees. Convert the birth dates to 
@@ -128,3 +128,57 @@
 --  5.2: NULL Functions
 
 
+-- Q1: Create a report that shows the Global Fast Foods promotional name, start date, and end date 
+-- from the f_promotional_menus table. If there is an end date, temporarily replace it with “end in two 
+-- weeks.” If there is no end date, replace it with today's date.
+    select name, start_date, nvl2(end_date, 'end in two weeks', sysdate)
+    from f_promotional_menus;
+
+-- Q2: the manager of Global Fast Foods has decided to give all staff who currently do not earn 
+-- overtime an overtime rate of $5.00. Construct a query that displays the last names and the 
+-- overtime rate for each staff member, substituting $5.00 for each null overtime value. 
+    select last_name, to_char(nvl(overtime_rate, 5), '$99.99') as "Overtime Rate" from f_staffs;
+
+
+-- Q3:  Not all Global Fast Foods staff members have a manager. Create a query that displays the 
+-- employee last name and 9999 in the manager ID column for these employees. 
+    select last_name, nvl(manager_id, 9999) as "Manager" from f_staffs;
+
+
+-- Q4: 
+    -- a.  Create a report listing the first and last names and month of hire for all employees in the 
+    -- EMPLOYEES table (use TO_CHAR to convert hire_date to display the month).  
+    select first_name, last_name, to_char(hire_date, 'Month') from employees;
+
+    -- b.  Modify the report to display null if the month of hire is September. Use the NULLIF function.
+    select first_name, last_name, nullif(to_char(hire_date, 'Month'), 'September') from employees;
+
+
+-- Q5: Display the first name, last name, manager ID, and commission percentage of all employees in departments 80 and 90. In a 5th column called “Review”, again display the manager ID. 
+    -- If they don't have a manager, display the commission percentage. 
+    -- If they don't have a commission, display 99999.
+    select first_name, last_name, MANAGER_ID, COMMISSION_PCT, 
+    COALESCE(MANAGER_ID, COMMISSION_PCT, 99999) 
+    from employees where department_id in (80, 90);
+
+
+-- ======================================================================================
+
+
+--  5.3: Conditional Expressions (Do it yourself)
+
+
+-- Q1: rom the DJs on Demand d_songs table, create a query that replaces the 2-minute songs with
+-- “shortest” and the 10-minute songs with “longest”. Label the output column “Play Times”.
+
+
+--  Q2: use the Oracle database employees table and CASE expression to decode the department id.
+-- Display the department id, last name, salary, and a column called “New Salary” whose value is
+-- based on the following conditions:
+    -- If the department id is 10 then 1.25 * salary 
+    -- If the department id is 90 then 1.5 * salary 
+    -- If the department id is 130 then 1.75 * salary 
+    --  Otherwise, display the old salary.
+
+
+-- ======================================================================================
