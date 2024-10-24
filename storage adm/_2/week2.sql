@@ -165,12 +165,16 @@
 -- ======================================================================================
 
 
---  5.3: Conditional Expressions (Do it yourself)
+--  5.3: Conditional Expressions
 
 
 -- Q1: rom the DJs on Demand d_songs table, create a query that replaces the 2-minute songs with
 -- “shortest” and the 10-minute songs with “longest”. Label the output column “Play Times”.
-
+    select title, duration,
+    case duration when '2 min' then 'shortest'
+    when '10 min' then 'longest'
+    end as "Play Times"
+    from d_songs;
 
 --  Q2: use the Oracle database employees table and CASE expression to decode the department id.
 -- Display the department id, last name, salary, and a column called “New Salary” whose value is
@@ -179,6 +183,9 @@
     -- If the department id is 90 then 1.5 * salary 
     -- If the department id is 130 then 1.75 * salary 
     --  Otherwise, display the old salary.
+    select department_id, last_name, salary, 
+    decode(department_id, 10, salary * 1.25, 90, salary * 1.5, 130, salary * 1.75, salary) as "New Salary"
+    from employees;
 
 
 -- ======================================================================================
