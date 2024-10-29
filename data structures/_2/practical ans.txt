@@ -1,0 +1,15 @@
+Practical 2
+
+1. 
+
+    a: An algorithm is a set of instructions to help solve a problem, important to care.
+
+    b: Minimax search algorithm.
+    "search through the huge tree of possible moves".
+    Corectnesss. Efficiency.
+    Asymptotic Analysis.
+    Linear and binary search.
+    Square-marking algorithm.
+
+
+2. 

@@ -1,0 +1,22 @@
+Algo set of instr to solve a problem
+
+Examples include routingA for maps, renderingA for games, audion&vidCompressionA for social media platforms
+
+Corectness and Efficiency
+
+Asymptotic Analysis - defining the mathematical boundation of its run-time performance
+
+3 scenarios:
+    Best case: min time. Ω(n) Omega
+
+    Average: avg time. Θ(n) Theta, upper and lower bound.
+
+    Worst: max time. Ο (Big Oh Notation) O(n)
+
+Merge Sort with a running time complexity of Ο(n log n)
+
+Insertion Sort with a running time complexity of Ο(n2)
+
+    Merge sort more efficient than insertion sort since input size, n increases
+
+    

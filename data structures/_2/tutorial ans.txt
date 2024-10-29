@@ -1,0 +1,15 @@
+Tutorial 2
+
+1. An algorithm is a set of instructions created to help solve a problem.
+
+2. Rendering + Optimization and Schedulling algorithms
+    - Used in graphics rendering in games and routing respectively
+
+3. Move: 7 moves total
+        smallest to final peg (2)
+        med to middle peg (1)
+        smallest to middle peg (1)
+        largest to final peg (2)
+        smallest to starting peg (1)
+        med to final peg (1)
+        smallest to final peg (2)

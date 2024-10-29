@@ -14,6 +14,10 @@
     select concat(concat('Oracle ',' Internet'),' Academy') 
     from dual;
 
+    -- More correct answer
+    SELECT CONCAT('Oracle ', ' Internet')||' Academy' AS "The Best Class" 
+    FROM DUAL;
+
 
 -- Q2: string “Oracle Internet Academy” to produce the following output: “The net”?
     select substr('Oracle Internet Academy', 13, 3) as "The net" from dual;

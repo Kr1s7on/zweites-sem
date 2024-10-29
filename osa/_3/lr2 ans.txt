@@ -1,0 +1,24 @@
+1.
+
+
+2.
+
+
+3.
+
+
+4. 
+
+Suggest some reasons why UNIX is a monolithic kernel.. 
+The reasons are as follows : In the early days of computing, it is much more efficient to lump the code for the various managers together. ◦ Combining the code does not require abstractions between the managers, thus reducing unnecessary code. ◦ The various managers' tasks require a high level of interaction among them. Coupling single ode enables that them into interaction to be done efficiently.
+
+
+5. 
+
+I0 and memory instructions are to be
+privileged because the OS is responsible for
+managing the memory and 10 devices
+
+Having these instructions privileged, allow the
+OS to ensure that ser programs cannot
+directly manipulate the devices.
