@@ -1,0 +1,5 @@
+7. 8 echo replies
+8. ip of wiki is 103.102.166.224
+9. Avg of 5.5ms, 0.0055s
+10. no reply recieved, 100% packet loss
+11. !"#$%&'()*+,-./01234567

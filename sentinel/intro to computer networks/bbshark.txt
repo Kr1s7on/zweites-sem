@@ -1,0 +1,15 @@
+=step 2
+
+6. 6828 packets
+
+8. 8 HTTP packets
+
+9. ip.src==172.30.208.141
+
+10. http.requests
+
+=step 3
+
+11. 8 tcp packets
+
+12. a Cisco server idk type or version
