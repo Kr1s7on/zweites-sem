@@ -1,4 +1,4 @@
-def binarySearchFirstOccurrence(theValues, target):
+def binarySearchFO(theValues, target):
     low = 0
     high = len(theValues) - 1 # The last index
     result = -1  # Store the position of the first occurrence
@@ -18,3 +18,8 @@ def binarySearchFirstOccurrence(theValues, target):
             low = mid + 1
 
     return result
+
+# Test the function
+theValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = 5
+print(binarySearchFO(theValues, target))  # Output: 4
