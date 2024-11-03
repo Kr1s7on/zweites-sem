@@ -59,12 +59,43 @@ CASE expr
 END
 ```
 
+A slightly more real example:
+```sql
+SELECT 
+    employee_id,
+    first_name,
+    last_name,
+    department_id,
+    CASE department_id
+        WHEN 1 THEN 'Sales'
+        WHEN 2 THEN 'Engineering'
+        WHEN 3 THEN 'HR'
+        ELSE 'Other'
+    END AS department_name
+FROM employees;
+```
+
 ### DECODE Function
 ```sql
 DECODE(column, 
     search1, result1,
     search2, result2,
     default_result)
+```
+
+Example:
+```sql
+SELECT 
+    employee_id,
+    first_name,
+    last_name,
+    department_id,
+    DECODE(department_id, 
+        1, 'Sales',
+        2, 'Engineering',
+        3, 'HR',
+        'Other') AS department_name
+FROM employees;
 ```
 
 ### Key Differences
