@@ -1,0 +1,12 @@
+Tutorial Answers
+
+1. Linear Programming is  concerned with the management of scarce resources
+
+2. We have to consider the following three:
+Objective Function: What you're trying to maximize or minimize
+Constraints: The limits you have to work within
+Decision Variables: The things you can control
+
+3. Conclusion: 
+
+4. Conclusion: 
