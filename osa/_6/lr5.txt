@@ -1,0 +1,21 @@
+1. A process is a binary program in execution.
+
+2. In a mufti-threaded process, information that is related to the process state as a whole must be shared by all the threads in the same process.
+
+This is so, because to the user, the process is still one process, even though it has multiple threads all executing at the same time. 
+
+Information that is related to a particular thread of execution cannot be shared as there are multiple execution engines, each represented by a thread.
+
+3. 5 circles
+    =start, ready state
+
+    =schedule, running
+        loop to continue running
+
+        =interrupt, blocked for interrupt
+
+        =blocked for reuseable resource, BREAK return to ready
+
+        =blocked for consumable resource, wait for resource to be allocated, return ready
+
+4. Process Control Block, organised as a queue in the memory.

@@ -1,0 +1,12 @@
+1. The main problem is that different devices have different characteristics and thus require different methods to access or use. To use these devices, application programs need to know every device's characteristics and methods of access. This is not practically - possible as new devices are produced all the time.. To solve this problem, OS provides abstraction through its Device Manager which standardizes the interface required to use all the devices in each class. Application - programs just need to know a standard device interface to use all the devices in that class (e.g. all types of scanners).
+
+2. Device Status Table, in the table consists of these:
+    - Device ID
+    - Device Status (busy, done, idle)
+    - Queue of processess waiting for the Device
+
+3. Buffering allows the CPU to temp store/read data to/fro memory when transferring data to/fro devices.
+
+This allows dev_controller to do the actual transfer when the CPU is doing other things, achieving overlap.
+
+In addition, we also eliminate the need for CPU to wait for devices. Overall, this increases performance of devices.
