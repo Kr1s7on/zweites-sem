@@ -140,6 +140,55 @@
   CONNECT BY PRIOR employee_id = manager_id;
   ```
 
+**Understanding Different Joins**
+
+Here's a breakdown of when to use different types of joins and their purposes:
+
+**1. Inner Join:**
+   - **Purpose:** Returns rows that have matching values in both tables.
+   - **When to use:** When you want to combine rows from two tables based on a common column and only keep the rows that have matching values in both tables.
+
+**2. Left Outer Join:**
+   - **Purpose:** Returns all rows from the left table, and the matched rows from the right table.
+   - **When to use:** When you want to retrieve all rows from the left table, even if there are no matching rows in the right table.
+
+**3. Right Outer Join:**
+   - **Purpose:** Returns all rows from the right table, and the matched rows from the left table.
+   - **When to use:** Similar to a left outer join, but focuses on the right table.
+
+**4. Full Outer Join:**
+   - **Purpose:** Returns all rows when there is a match in either left or right table.
+   - **When to use:** When you want to combine rows from two tables and include all rows from both tables, whether or not they have matching values.
+
+**5. Self Join:**
+   - **Purpose:** Joins a table to itself to compare rows within the same table.
+   - **When to use:** When you want to compare rows within a single table, such as finding employees who are also managers.
+
+**Example Scenario:**
+Imagine you have two tables: `employees` and `departments`.
+
+**Scenario 1: Finding employees and their departments**
+* **Inner Join:**
+   ```sql
+   SELECT e.first_name, d.department_name
+   FROM employees e
+   INNER JOIN departments d ON e.department_id = d.department_id;
+   ```
+   This will return a list of employees and their corresponding departments.
+
+**Scenario 2: Finding employees who don't have a department**
+* **Left Outer Join:**
+   ```sql
+   SELECT e.first_name, d.department_name
+   FROM employees e
+   LEFT OUTER JOIN departments d ON e.department_id = d.department_id
+   WHERE d.department_id IS NULL;
+   ```
+   This will return a list of employees who don't have a department assigned.
+
+By understanding the purpose of each join, you can effectively combine data from multiple tables to answer specific queries.
+
+
 **7-1: Oracle Equijoin and Cartesian Product Practice Solutions**
 * Practice exercises involving equijoins and Cartesian products.
 
