@@ -1,0 +1,221 @@
+IT1391 Data Storage Administration
+Week 6 Practical test (40%)
+
+80 mins, 15 randomized Short Qns (construct SQL statements)
+
+Topic covered:
+– Section 1, 2 and 3
+- Section 4 and 5
+- Section 6,7,8 (excluding Hierarchical Queries, Cartesian Product Join)
+- Section 9 and 10 (excluding Set Operators)
+
+Helpsheet containing SQL Syntax & Database Schema will be made available to students at BrightSpace for reference.
+Database Schemas and SQL Syntax (Practical Test).pdf
+
+The following is the content in the pdf:
+
+```plaintext
+ORACLE SQL Syntaxes
+S/N Name Syntax
+1. SELECT SELECT column1, column2, ...
+FROM table_name;
+2. WHERE SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+3. ORDER BY SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+4. SELECT
+DISTINCT
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+5. AND SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3
+...;
+6. OR SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3
+...;
+7. LIKE SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+8. IN SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+9. BETWEEN SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+10. COLUMN ALIAS SELECT column_name AS alias_name
+FROM table_name;
+Or
+SELECT column_name “alias_name”
+FROM table_name;
+11. Case
+Manipulation
+Functions
+UPPER(column_name | expresssion)
+LOWER(column_name | expresssion)
+INITCAP(column_name | expresssion)
+IT1393 Data Storage Administration 2
+Official (Closed) and Sensitive-Normal
+12. Character
+Manipulation
+Functions
+CONCAT(column1 | expression1, column2 |
+expression2)
+SUBSTR(column_name | expression, starting
+position, length)
+LENGTH(column_name | expression)
+LPAD(column_name | expression, total numer of
+characters in the padded string, the character
+to pad with)
+INSTR (column_name | expression, column_name |
+expression)
+13. Additional
+Manipulation
+Functions - TRIM
+TRIM([ { { LEADING | TRAILING | BOTH }
+ [ trim_character]
+ | trim_character
+ }
+ FROM
+ ]
+ trim_source
+)
+E.g.
+SELECT TRIM(LEADING 'a' FROM 'abcba')
+FROM DUAL;
+Result: bcba
+14. Additional
+Manipulation
+Functions -
+REPLACE
+REPLACE (string1, string_to_replace,
+[replacement_string])
+15. Number
+Functions
+ROUND (column|expression, decimal places)
+TRUNC(column|expression, decimal places)
+MOD(column|expression, number)
+16. DATE
+FUNCTIONS
+MONTHS_BETWEEN Number of months between two dates
+MONTHS_BETWEEN(date_value1,
+date_value2)
+IT1393 Data Storage Administration 3
+Official (Closed) and Sensitive-Normal
+ADD_MONTHS Add calendar months to date
+ADD_MONTHS(date_value, number)
+NEXT_DAY Date of the next occurrence of day of the
+week specified
+NEXT_DAY(date_value, weekday)
+LAST_DAY Last day of the month
+LAST_DAY(date_value)
+ROUND Round date
+ROUND(date_value, unit of
+date)
+TRUNC Truncate date
+TRUNC(date_value, unit of
+date)
+17. Type Conversion
+Functions
+TO_CHAR (date column name, 'format model you
+specify')
+TO_CHAR (number, 'format model')
+TO_NUMBER (character string, 'format model')
+TO_DATE(character string, 'format model')
+18. NULL Functions NVL (expression 1 value that may contain a null,
+expression 2 value to substitute for null)
+NVL2 (expression 1 value that may contain a null,
+expression 2 value to return if expression 1 is
+not null, expression 3 value to replace if
+expression 1 is null)
+NULLIF (expression 1, expression 2)
+COALESCE (expression 1, expression 2,
+...expression n)
+19. Conditional
+Expressions -
+CASE
+CASE
+WHEN condition1 THEN result1
+WHEN condition2 THEN result2
+WHEN conditionN THEN resultN
+ELSE result
+END;
+IT1393 Data Storage Administration 4
+Official (Closed) and Sensitive-Normal
+20. Conditional
+Expressions -
+DECODE
+DECODE(columnl|expression, search1, result1
+[, search2, result2,...,]
+[, default])
+21. INNER JOIN SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+22. LEFT OUTER
+JOIN
+SELECT column_name(s)
+FROM table1
+LEFT OUTER JOIN table2
+ON table1.column_name = table2.column_name;
+23. RIGHT OUTER
+JOIN
+SELECT column_name(s)
+FROM table1
+RIGHT OUTER JOIN table2
+ON table1.column_name = table2.column_name;
+24. GROUP BY SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s);
+25. HAVING SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+26. SELECT column_name(s)
+FROM table_name
+WHERE column_name operator
+ (SELECT column_name(s)
+ FROM table_name
+ [WHERE] condition)
+
+```
+
+I need your help going through SQL basics all the way up to section 10.
+
+I will prompt you two chapters at a time.
+
+Provide me with real practical questions so that I get the hang of the different SQL commands.
+
+
+
+
+Wait I think your topics are abit slow, this might guide you abit
+
+Grp 1
+4-1 : Case and Character Manipulation
+4-2: Number Functions
+4-3: Date Functions
+5-1: Conversion Functions Practice Activities
+5-2: NULL Functions
+5-3: Conditional Expressions Practice Activities
+
+Grp2
+6-1: Cross Joins and Natural Joins
+6-2: Join Clauses
+6-3: Inner versus Outer Joins
+6-4 : Self Joins and Hierarchical Queries
+7-1: Oracle Equijoin and Cartesian Product Practice Solutions
+8-1: Group Functions
+8-2: COUNT, DISTINCT, NVL
+
+Grp3
+9-1 : Using GROUP BY and HAVING Clauses
+9-3: Set Operators
+10-1: Fundamentals of Subqueries
+10-2: Single-Row Subqueries
