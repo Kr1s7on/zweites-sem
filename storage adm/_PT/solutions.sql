@@ -65,3 +65,43 @@ From
 
 
 ============================================
+
+SELECT Employees.Name AS EmpName
+
+SELECT Employees.Name AS EmployeeName, Departments.DepartmentName
+FROM Employees
+CROSS JOIN Departments;
+
+SELECT Name, DepartmentName
+FROM Employees
+NATURAL JOIN Departments;
+
+
+
+
+
+-- Q1
+SELECT last_name, department_name
+FROM employees
+CROSS JOIN departments;
+
+
+-- Q2
+SELECT department_id, department_name, location_id, city
+FROM departments
+NATURAL JOIN locations;
+
+
+-- Q3
+SELECT department_id, department_name, location_id, city
+FROM departments
+NATURAL JOIN locations
+WHERE department_id IN (20, 50);
+
+
+-- 6.2
+-- Q1
+
+
+
+
