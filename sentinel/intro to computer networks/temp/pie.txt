@@ -1,0 +1,17 @@
+== Private Investigations
+
+== Task 1
+
+1. private IPv4 addr: 172.26.187.64
+
+IP address falls within the private IP range (172.16.0.0 to 172.31.255.255). Private IP addresses are used within local networks and are not directly accessible from the internet.
+
+
+== Task 2
+
+2. public IPv4: 202.12.95.98 (whatismyip.com)
+
+
+== Task 3
+
+3. city: "Singapore", "AS17617 Nanyang Polytechnic"
