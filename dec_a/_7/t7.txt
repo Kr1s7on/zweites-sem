@@ -1,0 +1,16 @@
+1.
+optimistic = 15 days
+most likely = 18 days
+pessimistic = 27 days
+
+t = (a + 4m + b) / 6
+
+(15 + 4*18 + 27) / 6 = 19
+
+
+2.
+opps = 11 days
+most = 15 days
+pessimistic = 23 days
+
+((23 - 11) / 6)**2 
