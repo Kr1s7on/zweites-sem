@@ -1,6 +1,6 @@
-# 📚 **Netcat Guide**
+# **Netcat Guide**
 
-## 🛠️ **Basic Commands**
+## **Basic Commands**
 
 ### **Basic Syntax**
 
@@ -10,7 +10,7 @@ nc [options] [IP Address or hostname] [port]
 
 ---
 
-## 🌐 **Connecting to a Server**
+## **Connecting to a Server**
 
 ### **Example: Connect to a Simple TCP Server**
 
@@ -22,7 +22,7 @@ This connects to **192.168.1.10** on port **80**.
 
 ---
 
-## 🔍 **Port Scanning**
+## **Port Scanning**
 
 ### **Example: Scan a Range of Ports**
 
@@ -37,7 +37,7 @@ This scans ports **20** to **100** on **192.168.1.10** and shows which are open.
 
 ---
 
-## 🔁 **Setting Up a Simple Chat**
+## **Setting Up a Simple Chat**
 
 ### **Step 1: Start a Listener**
 
@@ -61,7 +61,7 @@ Replace **192.168.1.5** with the listener’s IP address. Now you can chat betwe
 
 ---
 
-## 📤 **File Transfer**
+## **File Transfer**
 
 ### **Send a File**
 
@@ -83,7 +83,7 @@ This sends **file.txt** and saves it as **received.txt** on the receiver’s sid
 
 ---
 
-## 🕵️ **Bind Shell (Remote Access)**
+## **Bind Shell (Remote Access)**
 
 ### **Start a Bind Shell (on the target machine)**
 
@@ -103,14 +103,7 @@ Now you have remote access to the target’s command line!
 
 ---
 
-## ⚠️ **Important Notes**
-
-1. **Security**: Be cautious when using Netcat for bind shells. Unauthorized use is illegal.
-2. **Firewall**: Ensure your firewall settings allow Netcat traffic for legitimate testing purposes.
-
----
-
-## 🔗 **Common Options Summary**
+## **Common Options Summary**
 
 | Option | Description |
 |--------|-------------|
