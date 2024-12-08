@@ -1,0 +1,26 @@
+Number,Elapsed,Statement,Feedback,Rows
+1,0.00,CREATE TABLE ora_customers (     customer_id NUMBER PRIMARY ,"Error at line 1/14: ORA-00955: name is already used by an existing object
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 828
+ORA-06512: at ""SYS.DBMS_SYS_SQL"", line 1658
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 813
+ORA-06512: at ""APEX_220200.WWV_FLOW_DYNAMIC_EXEC"", line 2046",
+2,0.00,"CREATE TABLE ora_stores (     store_id NUMBER PRIMARY KEY,  ","Error at line 1/14: ORA-00955: name is already used by an existing object
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 828
+ORA-06512: at ""SYS.DBMS_SYS_SQL"", line 1658
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 813
+ORA-06512: at ""APEX_220200.WWV_FLOW_DYNAMIC_EXEC"", line 2046",
+3,0.02,"CREATE TABLE ora_staffs (     staff_id NUMBER PRIMARY KEY,  ",Table created.,0
+4,0.02,"CREATE TABLE ora_orders (     order_id NUMBER PRIMARY KEY,  ",Table created.,0
+5,0.00,"CREATE TABLE ora_brands (     brand_id NUMBER PRIMARY KEY,  ","Error at line 1/14: ORA-00955: name is already used by an existing object
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 828
+ORA-06512: at ""SYS.DBMS_SYS_SQL"", line 1658
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 813
+ORA-06512: at ""APEX_220200.WWV_FLOW_DYNAMIC_EXEC"", line 2046",
+6,0.01,CREATE TABLE ora_categories (     category_id NUMBER PRIMARY,"Error at line 1/14: ORA-00955: name is already used by an existing object
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 828
+ORA-06512: at ""SYS.DBMS_SYS_SQL"", line 1658
+ORA-06512: at ""SYS.WWV_DBMS_SQL_APEX_220200"", line 813
+ORA-06512: at ""APEX_220200.WWV_FLOW_DYNAMIC_EXEC"", line 2046",
+7,0.02,CREATE TABLE ora_products (     product_id NUMBER PRIMARY KE,Table created.,0
+8,0.02,"CREATE TABLE ora_stocks (     store_id NUMBER NOT NULL,     ",Table created.,0
+9,0.02,"CREATE TABLE ora_order_items (     order_id NUMBER NOT NULL,",Table created.,0
