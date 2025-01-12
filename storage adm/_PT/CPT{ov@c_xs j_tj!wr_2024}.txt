@@ -1,0 +1,27 @@
+CPT{ov@c_xs j_tj!wr_2024}
+
+NYP{wr@p_ed s_pr!se_2024}
+
+
+Grinch's Encrypted Chaos
+
+500
+
+very easy crypto
+
+Every Christmas, Santa Claus receives thousands of letters from children around the world, each containing their heartfelt wishes for presents. To protect the privacy of these wishes, Santa uses a secret encryption method to ensure only he can read them. This encryption is crucial—if anyone else sees the letters, it would ruin the magic of Christmas. But this year, disaster struck. The Grinch, a notorious hacker, managed to infiltrate Santa’s encryption system and scrambled it beyond recognition. Now, Santa is in a race against time. The letters, still encrypted, are locked in a system that no longer works with his usual decryption key. The magic of Christmas is at risk, and without the decrypted letters, Santa won’t know which presents to deliver. Santa needs your help to break through the Grinch’s chaos and restore the encryption system. Can you find a way to unscramble the Grinch’s tricks and save Christmas?
+
+you are provided with grinch_encrypted.txt
+
+```plaintext
+
+WooTh0gbPZ5mdI8cepQbhAE0iT==
+
+```
+
+Hint: The Grinch left behind a clue: the shift is as simple as 'three steps forward.' Being the mischief-maker he is, he only loves to play with letters—numbers remain untouched.
+
+
+NYPéGr1nch_3ncryptè
+
+NYP{Gr1nch_3ncrypt}
